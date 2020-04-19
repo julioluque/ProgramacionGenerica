@@ -1,4 +1,4 @@
-package ArrayList;
+package arraylist;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -36,18 +36,18 @@ public class UsoEmpleado {
 		listaEmpleados.trimToSize();
 		System.out.println(listaEmpleados.size());
 
-		System.out.println("----------- Bucle for convencional ---------------------");
+		System.out.println("\n----------- Bucle for convencional ---------------------");
 		for (int i=0; i<listaEmpleados.size(); i++) {
 			Empleado e  = listaEmpleados.get(i);
 			System.out.println(i + "-" + e.dameDatos());
 		}
 		
-		System.out.println("----------- Bucle for each ---------------------");
+		System.out.println("\n----------- Bucle for each ---------------------");
 		for(Empleado e:listaEmpleados) {
 			System.out.println(e.dameDatos());
 		}
 
-		System.out.println("----------- Conversion de arrayList a Array y Bucle for convencional ---------------------");
+		System.out.println("\n----------- Conversion de arrayList a Array y Bucle for convencional ---------------------");
 		Empleado arrayEmpleado[] = new Empleado[listaEmpleados.size()];
 		listaEmpleados.toArray(arrayEmpleado);
 		for(int i = 0; i<arrayEmpleado.length;i++) {
@@ -55,11 +55,10 @@ public class UsoEmpleado {
 		}
 		
 		
-		System.out.println("----------- Bucle iterador ---------------------");
-		Iterator <Empleado> miIterador = listaEmpleados.iterator();
-		
-		while (miIterador.hasNext()) {
-			System.out.println(miIterador.next().dameDatos());
+		System.out.println("\n----------- Bucle iterador ---------------------");
+		Iterator <Empleado> iter = listaEmpleados.iterator();
+		while(iter.hasNext()) {
+			System.out.println(iter.next().dameDatos());
 		}
 		
 	}
