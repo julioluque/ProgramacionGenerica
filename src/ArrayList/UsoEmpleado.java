@@ -5,6 +5,10 @@ import java.util.Iterator;
 
 public class UsoEmpleado {
 	public static void main(String[] args) {
+//		Empleado listaEmpleados[] = new Empleado[3];
+//		listaEmpleados[0] = new Empleado("Juan",45,2500);
+//		listaEmpleados[1] = new Empleado("Ana",55,2000);
+//		listaEmpleados[2] = new Empleado("Luis",25,2600);
 
 		ArrayList<Empleado> listaEmpleados = new ArrayList<Empleado>();
 		listaEmpleados.ensureCapacity(16);
@@ -25,12 +29,12 @@ public class UsoEmpleado {
 		listaEmpleados.add(new Empleado("Noelia",25,2600));
 		listaEmpleados.add(new Empleado("Omar",25,2600));
 		
-		System.out.println(listaEmpleados.size());
-			
-		for(Empleado e:listaEmpleados) {
-			System.out.println(e.dameDatos());
-		}
+		//Insertando en una posicion especifica. metodo set
+		listaEmpleados.set(2, new Empleado("Zabala",25,2600));
 		
+		System.out.println(listaEmpleados.get(1).dameDatos());
+		listaEmpleados.trimToSize();
+		System.out.println(listaEmpleados.size());
 		
 	}
 }
