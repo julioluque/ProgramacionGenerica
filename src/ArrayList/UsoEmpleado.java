@@ -35,6 +35,32 @@ public class UsoEmpleado {
 		System.out.println(listaEmpleados.get(1).dameDatos());
 		listaEmpleados.trimToSize();
 		System.out.println(listaEmpleados.size());
+
+		System.out.println("----------- Bucle for convencional ---------------------");
+		for (int i=0; i<listaEmpleados.size(); i++) {
+			Empleado e  = listaEmpleados.get(i);
+			System.out.println(i + "-" + e.dameDatos());
+		}
+		
+		System.out.println("----------- Bucle for each ---------------------");
+		for(Empleado e:listaEmpleados) {
+			System.out.println(e.dameDatos());
+		}
+
+		System.out.println("----------- Conversion de arrayList a Array y Bucle for convencional ---------------------");
+		Empleado arrayEmpleado[] = new Empleado[listaEmpleados.size()];
+		listaEmpleados.toArray(arrayEmpleado);
+		for(int i = 0; i<arrayEmpleado.length;i++) {
+			System.out.println(arrayEmpleado[i].dameDatos());
+		}
+		
+		
+		System.out.println("----------- Bucle iterador ---------------------");
+		Iterator <Empleado> miIterador = listaEmpleados.iterator();
+		
+		while (miIterador.hasNext()) {
+			System.out.println(miIterador.next().dameDatos());
+		}
 		
 	}
 }
